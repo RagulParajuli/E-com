@@ -1,15 +1,17 @@
 
 buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
     dependencies {
-        classpath ("com.google.dagger:hilt-android-gradle-plugin:2.40.1")
-        classpath ("com.google.gms:google-services:4.3.13")
-
-        val nav_version = "2.5.2"
-        classpath ("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31") // Replace <version> with the Kotlin version you're using
     }
 }
+
 
 plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
+    id("com.google.dagger.hilt.android") version "2.44" apply false
 }

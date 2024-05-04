@@ -1,32 +1,35 @@
-import org.jetbrains.kotlin.gradle.dsl.KotlinCompile
+//import com.google.gms.googleservices.GoogleServicesPlugin
 
 plugins {
-    id("com.android.application")
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
+// Apply the Hilt Android Gradle plugin
     id("kotlin-android")
-    id("kotlin-parcelize")
-    id("androidx.navigation.safeargs.kotlin")
-    id("dagger.hilt.android.plugin") version "2.44.0"
-    id("com.google.gms.google-services")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
-    compileSdkVersion = 33
+    namespace = "com.example.e_commerce"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ecommerce"
-        minSdk = 21
-        targetSdk = 33
+        applicationId = "com.example.e_commerce"
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-
     buildTypes {
-        getByName("release") {
+        release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
@@ -35,43 +38,36 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
-
     kotlinOptions {
-        jvmTarget = "11"
-    }
-
-    tasks.withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "11"
-        }
-    }
-
-    // Add this block to apply the Google Services plugin
-    GoogleServicesPlugin.config.project {
-        googleServicesJson.set(file("https://console.firebase.google.com/u/1/project/e-commerce-d4a29/overview"))
+        jvmTarget = "1.8"
     }
 }
+// TODO()
+// Add this block to apply the Google Services plugin
+//    GoogleServicesPlugin.config.project {
+//        googleServicesJson.set(file("https://console.firebase.google.com/u/1/project/e-commerce-d4a29/overview"))
+//}
+
+
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.2")
-    implementation("com.google.android.material:material:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.firebase:firebase-firestore-ktx:24.2.1")
-    implementation("com.google.firebase:firebase-storage:20.1.0")
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     implementation(libs.androidx.activity)
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
     // Navigation component
     val nav_version = "2.5.2"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-
 
     //loading button
     implementation("br.com.simplepass:loading-button-android:2.2.0")
@@ -92,8 +88,10 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
 
     //Dagger hilt
-    implementation("com.google.dagger:hilt-android:2.44.0")
-    kapt("com.google.dagger:hilt-compiler:2.44.0")
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    kapt("androidx.hilt:hilt-compiler:1.0.0-alpha03")
 
     //Firebase
     implementation("com.google.firebase:firebase-auth:21.0.6")
@@ -102,7 +100,12 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1")
 }
 
-repositories {
-    google()
-    mavenCentral()
+//repositories {
+//    google()
+//    mavenCentral()
+//}
+
+// Allow references to generated code
+fun kapt(s: String) {
+    var s = true
 }

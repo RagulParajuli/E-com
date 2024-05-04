@@ -1,17 +1,9 @@
+import org.gradle.api.initialization.Settings
+
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
         google()
         gradlePluginPortal()
-        //noinspection JcenterRepositoryObsolete
-        jcenter()
         maven("https://jitpack.io") // Add the repository for Dagger Hilt plugin here
     }
 }
@@ -24,5 +16,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "E-Commerce"
+rootProject.name = "E-com"
 include(":app")
