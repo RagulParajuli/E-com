@@ -3,14 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/blury_background"
-        android:scaleType="centerCrop"/>
-
+    android:layout_height="match_parent"
+    android:background="@drawable/Background">
     <TextView
         android:id="@+id/tvAppName"
         style="@style/h3"
@@ -85,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@id/edPasswordLogin" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonRegisterAccountOptions"
+        android:id="@+id/btn_Register"
         style="@style/blueButtonStyle"
         android:layout_width="0dp"
         android:layout_height="55dp"
@@ -100,8 +94,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="@+id/buttonRegisterAccountOptions"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions"
+        app:layout_constraintStart_toStartOf="@+id/btn_Register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Register"
         app:srcCompat="@drawable/facebook_login" />
 
     <TextView
@@ -122,8 +116,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:src="@drawable/google_login"
-        app:layout_constraintEnd_toEndOf="@+id/buttonRegisterAccountOptions"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_Register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Register" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -2,17 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/Background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/iv_blurry_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/blury_background"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="360dp" />
 
     <TextView
             android:id="@+id/tvAppName"
@@ -103,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@id/edEmailRegister" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonRegisterAccountOptions"
+        android:id="@+id/btn_Register"
         style="@style/blueButtonStyle"
         android:layout_width="310dp"
         android:layout_height="60dp"
@@ -119,8 +111,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:src="@drawable/facebook_login"
-        app:layout_constraintStart_toStartOf="@+id/buttonRegisterAccountOptions"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions" />
+        app:layout_constraintStart_toStartOf="@+id/btn_Register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Register" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -137,8 +129,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:src="@drawable/google_login"
-        app:layout_constraintEnd_toEndOf="@+id/buttonRegisterAccountOptions"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_Register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Register" />
 
     <TextView
         android:layout_width="wrap_content"

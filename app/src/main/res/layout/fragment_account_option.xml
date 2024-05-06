@@ -2,13 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/Background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/blury_background"
-        android:scaleType="centerCrop"/>
 
         <TextView
             android:id="@+id/tvAppName"
@@ -54,7 +49,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvRightAddressForShopping" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonRegisterAccountOptions"
+            android:id="@+id/btn_Register"
             style="@style/blueButtonStyle"
             android:layout_width="224dp"
             android:layout_height="67dp"
@@ -71,7 +66,7 @@
             android:text="Login"
             app:layout_constraintEnd_toEndOf="@id/tvQuality"
             app:layout_constraintStart_toStartOf="@id/tvQuality"
-            app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Register"
             android:layout_marginTop="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

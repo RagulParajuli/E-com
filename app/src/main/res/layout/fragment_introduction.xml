@@ -6,7 +6,7 @@
     android:background="@drawable/Background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".fragments.ShopingActivity">
 
     <ImageView
         android:id="@+id/imageView"

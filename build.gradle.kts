@@ -5,7 +5,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31") // Replace <version> with the Kotlin version you're using
+        classpath(libs.kotlin.gradle.plugin)
+        classpath(libs.google.services)
+        classpath (libs.google.services)
     }
 }
 

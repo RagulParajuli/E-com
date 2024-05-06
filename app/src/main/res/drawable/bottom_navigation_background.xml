@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <solid android:color="@color/g_white"/>-->
+<!--    <corners android:bottomLeftRadius="7dp"-->
+<!--        android:bottomRightRadius="7dp"/>-->
+
+    <!-- bottom_navigation_background.xml -->
+        <!-- Adjust the corner radius to make it more circular -->
+        <corners android:radius="20dp" />
+        <!-- Change the color as needed -->
+        <solid android:color="@color/white" />
+
+</shape>

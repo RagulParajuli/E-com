@@ -1,5 +1,3 @@
-//import com.google.gms.googleservices.GoogleServicesPlugin
-
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -7,6 +5,8 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
+//    id("com.android.application")
 }
 
 android {
@@ -45,13 +45,16 @@ android {
         jvmTarget = "1.8"
     }
 }
-// TODO()
+// TODO
 // Add this block to apply the Google Services plugin
-//    GoogleServicesPlugin.config.project {
-//        googleServicesJson.set(file("https://console.firebase.google.com/u/1/project/e-commerce-d4a29/overview"))
-//}
+// Update the path here
+// Configure Google Services plugin
 
-
+googleServices {
+//    val path = """E:\AndroidProjects\Using Kotlin\Kotlin with xml\E_com\app\google-services.json"""
+    val googleServicesJson = null
+    googleServicesJson?.set()
+}
 
 dependencies {
 
@@ -65,47 +68,42 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Navigation component
-    val nav_version = "2.5.2"
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
 
     //loading button
-    implementation("br.com.simplepass:loading-button-android:2.2.0")
+    implementation(libs.loading.button.android) // 2.2.0
 
     //Glide
-    implementation("com.github.bumptech.glide:glide:4.13.0")
+    implementation(libs.glide)
 
     //circular image
-    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation(libs.circleimageview)
 
     //viewpager2 indicator
-    implementation("io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1")
+    implementation(libs.viewpagerindicator)
 
     //stepView
-    implementation("com.shuhart.stepview:stepview:1.5.1")
+    implementation(libs.stepview)
 
     //Android Ktx
-    implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
+    implementation(libs.androidx.navigation.fragment.ktx.v277)
 
     //Dagger hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
-    kapt("androidx.hilt:hilt-compiler:1.0.0-alpha03")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.lifecycle.viewmodel)
+    kapt(libs.androidx.hilt.compiler)
 
     //Firebase
-    implementation("com.google.firebase:firebase-auth:21.0.6")
+    implementation(libs.firebase.auth)
 
     //Coroutines with Firebase
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1")
+    implementation(libs.kotlinx.coroutines.play.services)
+
+//    TODO
+//    implementation (libs.library)
 }
 
-//repositories {
-//    google()
-//    mavenCentral()
-//}
-
-// Allow references to generated code
-fun kapt(s: String) {
-    var s = true
+fun Nothing?.set() {
 }
