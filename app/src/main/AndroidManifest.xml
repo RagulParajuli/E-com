@@ -3,21 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".E_comApplication"
+        android:name="com.example.e_com.EcomApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="false"
+        android:supportsRtl="true"
         android:theme="@style/Theme.E_com"
         tools:targetApi="31">
         <activity
-            android:name=".activities.ShoppingActivity"
+            android:name="com.example.e_com.activities.ShoppingActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.LogRegActivity"
+            android:name="com.example.e_com.activities.LogRegActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

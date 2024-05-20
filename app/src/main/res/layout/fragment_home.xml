@@ -134,4 +134,20 @@
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_navigation_background"
+        app:elevation="0dp"
+        app:itemIconTint="@drawable/bottom_nav_item_background"
+        app:itemPaddingBottom="10dp"
+        app:itemPaddingTop="10dp"
+        app:itemRippleColor="@color/g_white"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

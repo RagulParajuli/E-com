@@ -145,7 +145,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonCheckout"
             style="@style/blueButtonStyle"
             android:layout_width="0dp"

@@ -11,6 +11,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class) // creating on Instance throughout the whole app
 object AppModule {
     @Provides // to provide new dependency
-    @Singleton
+    @Singleton // create one instance throughout the whole app
     fun provideFirebaseAuth() = FirebaseAuth.getInstance() // provide dependency fun to constructor of RegisterViewModel
 }

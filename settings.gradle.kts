@@ -13,8 +13,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
     }
 }
 
 rootProject.name = "E-com"
+include() ":StepView"
 include(":app")

@@ -35,6 +35,9 @@
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_accountOptionFragment_to_registerFragment22"
+            app:destination="@id/registerFragment2" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment2"
@@ -46,6 +49,9 @@
             app:destination="@id/loginFragment"
             app:enterAnim="@anim/from_bottom"
             app:popUpTo="@id/accountOptionFragment"/>
+        <action
+            android:id="@+id/action_registerFragment2_to_loginFragment2"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

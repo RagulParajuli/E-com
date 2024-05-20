@@ -3,11 +3,12 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven ("https://jitpack.io")
     }
     dependencies {
         classpath(libs.kotlin.gradle.plugin)
         classpath(libs.google.services)
-        classpath (libs.google.services)
+        classpath ("com.android.tools.build:gradle:3.6.0")
     }
 }
 

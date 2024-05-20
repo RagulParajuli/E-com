@@ -9,20 +9,84 @@
         android:id="@+id/homeFragment"
         android:name="com.example.e_com.fragment.Shopping.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment2"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.e_com.fragment.Shopping.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search"/>
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.e_com.fragment.Shopping.CartFragment"
         android:label="CartFragment"
-        tools:layout="@layout/fragment_cart"/>
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_billingFragment2"
+            app:destination="@id/billingFragment2" />
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.e_com.fragment.Shopping.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile"/>
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_billingFragment22"
+            app:destination="@id/billingFragment2" />
+        <action
+            android:id="@+id/action_profileFragment_to_userAccountFragment2"
+            app:destination="@id/userAccountFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_allOrdersFragment"
+            app:destination="@id/allOrdersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment2"
+        android:name="com.example.e_com.fragment.Shopping.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_address"/>
+    <fragment
+        android:id="@+id/billingFragment2"
+        android:name="com.example.e_com.fragment.Shopping.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing">
+        <action
+            android:id="@+id/action_billingFragment2_to_addressFragment2"
+            app:destination="@id/addressFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/allOrdersFragment"
+        android:name="com.example.e_com.fragment.settings.AllOrdersFragment"
+        android:label="AllOrdersFragment"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_allOrdersFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.e_com.fragment.settings.OrderDetailFragment"
+        android:label="OrderDetailFragment"
+        tools:layout="@layout/fragment_order_detail"/>
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.example.e_com.fragment.settings.UserAccountFragment"
+        android:label="UserAccountFragment"
+        tools:layout="@layout/fragment_user_account"/>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.e_com.fragment.Shopping.ProductDetailsFragment"
+        android:label="ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details"/>
 </navigation>
